@@ -4,37 +4,57 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
+
+  initializing: function () {
+    this.composeWith('npm-init', {
+      options: {
+        "skip-main": true,
+        "skip-test": true,
+        "main": "out/index.js"
+      }
+    }, {
+      local: require.resolve('generator-npm-init/app')
+    });
+  },
+
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the funkadelic ' + chalk.red('generator-vscode-typescript') + ' generator!'
+      'Welcome to frankebersoll\'s ' + chalk.red('Visual Studio Code TypeScript') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      // To access props later use this.props.someOption;
-
-      done();
-    }.bind(this));
+    done();
   },
 
-  writing: function () {
+  writingFiles: function () {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('**/*.*'),
+      this.destinationRoot(), {
+        globOptions: {
+          dot: true
+        }
+      }
     );
   },
 
-  install: function () {
-    this.installDependencies();
+  installingNpmDependecies: function () {
+    this.npmInstall([
+      'del',
+      'gulp',
+      'gulp-tsb',
+      'typescript'], {
+        saveDev: true
+      });
+  },
+
+  installingTypings: function() {
+    this.spawnCommandSync('typings', ['install', 'node', '--ambient', '--save']);
+  },
+
+  end: function () {
+    this.fs.delete(this.destinationPath('.yo-rc.json'));
+    this.spawnCommand('code', ['.']);
   }
+
 });

@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+    "outDir": "out/"
+	},
+	"exclude": [
+    "node_modules",
+    "typings/browser.d.ts",
+    "typings/browser"
+	]
+}
