@@ -48,7 +48,7 @@ module.exports = yeoman.generators.Base.extend({
       });
   },
 
-  installingTypings: function() {
+  installingTypings: function () {
     this.spawnCommandSync('typings', ['install', 'node', '--ambient', '--save']);
   },
 
