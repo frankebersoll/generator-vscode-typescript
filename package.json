@@ -1,6 +1,6 @@
 {
   "name": "generator-vscode-typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple template for test-driven TypeScript development with Visual Studio Code.",
   "homepage": "https://github.com/frankebersoll/generator-vscode-typescript",
   "author": {
