@@ -4,7 +4,7 @@
 [![Travis](https://img.shields.io/travis/frankebersoll/generator-vscode-typescript.svg)](https://travis-ci.org/frankebersoll/generator-vscode-typescript)
 [![Dependency Status](https://img.shields.io/david/frankebersoll/generator-vscode-typescript.svg)](https://david-dm.org/frankebersoll/generator-vscode-typescript)
 [![Dependency Status](https://img.shields.io/david/dev/frankebersoll/generator-vscode-typescript.svg)](https://david-dm.org/frankebersoll/generator-vscode-typescript#info=devDependencies)
-[![Code Coverage](https://img.shields.io/coveralls/frankebersoll/generator-vscode-typescript.svg)]()
+[![Code Coverage](https://img.shields.io/coveralls/frankebersoll/generator-vscode-typescript.svg)](https://coveralls.io/github/frankebersoll/generator-vscode-typescript)
 
 > A simple template for test-driven TypeScript development with Visual Studio Code.
 
