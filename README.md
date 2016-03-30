@@ -1,4 +1,10 @@
-# generator-vscode-typescript [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-vscode-typescript 
+
+[![NPM version](https://img.shields.io/npm/v/generator-vscode-typescript.svg)](https://www.npmjs.com/package/generator-vscode-typescript) 
+[![Travis](https://img.shields.io/travis/frankebersoll/generator-vscode-typescript.svg)](https://travis-ci.org/frankebersoll/generator-vscode-typescript)
+[![Dependency Status](https://img.shields.io/david/frankebersoll/generator-vscode-typescript.svg)](https://david-dm.org/frankebersoll/generator-vscode-typescript)
+[![Dependency Status](https://img.shields.io/david/dev/frankebersoll/generator-vscode-typescript.svg)](https://david-dm.org/frankebersoll/generator-vscode-typescript#info=devDependencies)
+
 > A simple template for test-driven TypeScript development with Visual Studio Code.
 
 ## Installation
